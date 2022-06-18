@@ -3,4 +3,7 @@
 // Array<타입>
 // 타입[]
 
-let list = [1, 2, 3];
+let list: (number | string)[] = [1, 2, 3, '4'];
+
+//let list: Array<number>
+// jsx 에서 충동 여부 있음

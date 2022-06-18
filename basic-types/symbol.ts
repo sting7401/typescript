@@ -2,7 +2,7 @@ console.log(Symbol('foo') === Symbol('foo'));
 
 const sym = Symbol();
 
-const obj = {
+let obj = {
 	[sym]: 'value',
 };
 
