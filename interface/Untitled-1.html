@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<div
+			*ngFor="let item of control.controls.defaultOptions.controls; let optionIndex = index"
+			class="stock-out-list"
+		>
+			<p class="stock-out-text">
+				<span
+					class="stock-out-etc"
+					*ngIf="item.value.optionStatus === optionStatusList[0].value"
+				>
+					품절
+				</span>
+				1 원
+			</p>
+			<a
+				nz-dropdown
+				nzTrigger="click"
+				[nzDropdownMenu]="menu"
+				style="margin-left: 15px"
+				class="option-menu"
+			>
+				<i nz-icon nzType="more" nzTheme="outline"></i>
+			</a>
+			<nz-dropdown-menu #menu="nzDropdownMenu">
+				<ul nz-menu>
+					<li
+						nz-menu-item
+						(click)="openMenuOptionDialog(i, optionIndex, item.value)"
+					>
+						편집
+					</li>
+					<li nz-menu-item (click)="removeOption(i, optionIndex)">
+						삭제
+					</li>
+				</ul>
+			</nz-dropdown-menu>
+		</div>
+		<style>
+			.stock-out-list {
+				display: inline-flex;
+				align-items: center;
+				position: relative;
+				margin-right: 5px;
+				margin-top: 5px;
+				padding: 5px;
+				background-color: white;
+				list-style: none;
+			}
+
+			.stock-out-text {
+				position: relative;
+			}
+
+			.stock-out-etc {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 3;
+				width: calc(100% - 25px);
+				height: 100%;
+				padding: 5px;
+				background-color: rgba(0, 0, 0, 0.5);
+				font-size: 13px;
+				color: #fff;
+				text-align: center;
+			}
+		</style>
+	</body>
+</html>
