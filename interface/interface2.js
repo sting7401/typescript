@@ -1,17 +1,7 @@
 "use strict";
-function hello3(person) {
-    console.log(`${person.name} `);
+// 개체가 있을수도있고 없을 수도 있을 때 ? 사용
+function hello2(person) {
+    console.log(`${person.name}`);
 }
-const p31 = {
-    name: 'max',
-};
-const p32 = {
-    name: 'name',
-    system: ['windows', 'linux'],
-};
-const p33 = {
-    name: '이름은 무조건 필수값',
-    father: p31,
-    mother: p32,
-};
-hello3(p33);
+hello2({ name: 'Max', age: 30 });
+hello2({ name: 'Max2' });

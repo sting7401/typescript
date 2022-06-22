@@ -1,26 +1,12 @@
-interface Person3 {
+interface person2 {
 	name: string;
 	age?: number;
-	[index: string]: any;
+}
+// 개체가 있을수도있고 없을 수도 있을 때 ? 사용
+
+function hello2(person: person2): void {
+	console.log(`${person.name}`);
 }
 
-function hello3(person: Person3): void {
-	console.log(`${person.name} `);
-}
-
-const p31: Person3 = {
-	name: 'max',
-};
-
-const p32: Person3 = {
-	name: 'name',
-	system: ['windows', 'linux'],
-};
-
-const p33: Person3 = {
-	name: '이름은 무조건 필수값',
-	father: p31,
-	mother: p32,
-};
-
-hello3(p33);
+hello2({ name: 'Max', age: 30 });
+hello2({ name: 'Max2' });
