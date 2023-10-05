@@ -8,16 +8,17 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "build-watch": "tsc -w"
+    "build-w": "tsc -w",
+    "preinstall": "npx only-allow pnpm"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "��#\u0000 \u0000t\u0000y\u0000p\u0000e\u0000s\u0000c\u0000r\u0000i\u0000p\u0000t\u0000\r\u0000 \u0000",
+  "description": "#typescript",
   "devDependencies": {
-    "@types/react": "^18.0.14",
+    "@types/react": "^18.2.25",
     "react": "^18.2.0",
-    "typescript": "^4.7.4"
+    "typescript": "^5.2.2"
   },
   "repository": {
     "type": "git",
