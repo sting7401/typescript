@@ -8,6 +8,5 @@ const f5 = (a) => {
 const f6 = (a) => {
     return `${a}`;
 };
-console.log('🚀 ~ file: 01.ts:10 ~ f6 ~ f6:', f6);
 // interface, type, class
 // 같은 구조를 가진 type 정의 필요

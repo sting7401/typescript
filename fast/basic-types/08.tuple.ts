@@ -1,13 +1,13 @@
-let x: [string, number];
+// let x: [string, number];
 
-x = ['string', 39];
+// //x = ['string', 39];
 
-console.log(typeof x);
+// console.log(typeof x);
 
-x[1] = 20;
+// //x[1] = 20;
 
-const person: [string, number] = ['string', 30];
+// const person: [string, number] = ['string', 30];
 
-const [first, second] = person;
+// const [first, second] = person;
 
-console.log(first, second);
+// console.log(first, second);

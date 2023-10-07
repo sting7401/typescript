@@ -11,11 +11,11 @@ const person: string | number = 0;
 type StringOrNumber = string | number;
 
 const anotherPerson: StringOrNumber = 0;
-anotherPerson = str;
+// anotherPerson = str;
 console.log(typeof anotherPerson);
 
 // aliasing tuple
-const persons: [string, number] = ['', 0];
+//const persons: [string, number] = ['', 0];
 
 type PersonsTuple = [string, number];
 
