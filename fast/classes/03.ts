@@ -1,4 +1,9 @@
-class PersonStatic {
+interface IPersonStatic {
+	hello(): void;
+	change(): void;
+}
+
+class PersonStatic implements IPersonStatic {
 	private static CITY = 'seoul';
 
 	hello() {
